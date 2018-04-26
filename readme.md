@@ -2,6 +2,26 @@
 ## Info
 An ACGAN to generate anime faces with specific hair and eyes color.
 
+Range of colors
+
+| Hair |   | Eyes  |
+|------|---|-------|  
+|orange|   | gray  |
+|white |   | black |
+|aqua  |   | orange|
+|gray  |   | pink  |
+|green |   | yellow|
+|red   |   | aqua  |
+|purple|   | purple|
+|pink  |   | green |
+|blue  |   | brown |
+|black |   | red   |
+|brown |   | blue  |
+|blonde|   |       |
+
+```
+
+
 ## Dataset
 Special thanks for 樊恩宇, TA of MLDS providing data. Data and tags are originally from konachan.
 
@@ -44,7 +64,7 @@ This will generate images with the condition given in [sample.txt](pretrained_mo
 
 <img src = "img/demo.png" width="200px">
 
-
+## Credits
 
 
 
