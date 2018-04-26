@@ -19,7 +19,6 @@ Range of colors
 |brown |   | blue  |
 |blonde|   |       |
 
-```
 
 
 ## Dataset
@@ -66,5 +65,7 @@ This will generate images with the condition given in [sample.txt](pretrained_mo
 
 ## Credits
 
+Model and training is inspired by 
+[pavitrakumar78/Anime-Face-GAN-Keras](https://github.com/pavitrakumar78/Anime-Face-GAN-Keras)
 
 
