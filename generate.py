@@ -17,7 +17,7 @@ from collections import deque
 import scipy.misc
 from keras.utils import to_categorical
 
-# np.random.seed(42)
+MODEL_DIR = 'pretrained_models'
 def build_generator():
     kernel_init = 'glorot_uniform'
     latent_size = 100
@@ -70,7 +70,7 @@ def generate_images(generator, latent_size, hair_color, eyes_color, testing_id):
     fake_data_X = generator.predict([noise, hairs, eyes])
     for i in range(5):
         img = denorm_img(fake_data_X[i])
-        scipy.misc.imsave(os.path.join('samples','sample_' +str(testing_id) +'_' + str(i+1)  +'.jpg'), img)
+        scipy.misc.imsave(os.path.join(MODEL_DIR,'sample_' +str(testing_id) +'_' + str(i+1)  +'.jpg'), img)
     
         
     # idx = np.random.randint(1, size = 16)[0]
@@ -80,7 +80,7 @@ def generator_mapping():
     gen_count = 0
     color_mapping = {}
     gen_idx = {}
-    with open('models/model_color_mapping.csv') as f:
+    with open( os.path.join(MODEL_DIR, 'model_color_mapping.csv') )as f:
         lines = csv.reader(f, delimiter=',')
         for i, line in enumerate(lines):
             generator_id = line[1] + '_' + line[2]
@@ -94,7 +94,7 @@ def load_generators(gen_idx):
     generators = []
     for key, value in gen_idx.items():
         g = build_generator()
-        g.load_weights(os.path.join('models', key+'_GENERATOR.hdf5'))
+        g.load_weights(os.path.join(MODEL_DIR, key+'_GENERATOR.hdf5'))
         generators.append(g)
     return generators
 
@@ -127,7 +127,7 @@ with open(text_file, 'r') as f:
                 eyes_color = color + ' eyes'
         hair_index = 7 # default pink
         eyes_index = 10 #default blue
-        generator_idx = 2 #default 2
+        generator_idx = 2  #default 2
         if(hair_color in HAIRS):
             hair_index = HAIRS.index(hair_color)
         if(eyes_color in EYES):
