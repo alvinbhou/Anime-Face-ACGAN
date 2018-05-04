@@ -75,7 +75,7 @@ This will generate images with the condition given in `sample.txt`. The format c
 <img src = "img/black-hair_blue-eyes-1.jpg" width="64px">
 <img src = "img/black-hair_blue-eyes-2.jpg" width="64px">
 
-#### Black hair Blue eyes
+#### Red hair Green eyes
 <img src = "img/red-hair-green-eyes-1.jpg" width="64px">
 <img src = "img/red-hair-green-eyes-2.jpg" width="64px">
 
