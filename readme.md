@@ -4,25 +4,27 @@ An ACGAN to generate anime faces with specific hair and eyes color.
 
 Range of colors
 
-| Hair |   | Eyes  |
-|------|---|-------|  
-|orange|   | gray  |
-|white |   | black |
-|aqua  |   | orange|
-|gray  |   | pink  |
-|green |   | yellow|
-|red   |   | aqua  |
-|purple|   | purple|
-|pink  |   | green |
-|blue  |   | brown |
-|black |   | red   |
-|brown |   | blue  |
-|blonde|   |       |
+| Hair |  Eyes  |
+|------| -------|  
+|orange|  gray  |
+|white |  black |
+|aqua  |  orange|
+|gray  |  pink  |
+|green |  yellow|
+|red   |  aqua  |
+|purple|  purple|
+|pink  |  green |
+|blue  |  brown |
+|black |  red   |
+|brown |  blue  |
+|blonde|        |
 
 
 
 ## Dataset
 Special thanks for 樊恩宇, TA of MLDS providing data. Data and tags are originally from konachan.
+
+The tags(hair or eyes color) of each image can be [tags_clean.csv](tags_clean.csv)
 
 
 ## Usage
@@ -52,19 +54,35 @@ optional arguments:
 generate.py
 
 ```
-python generate.py pretrained_models/sample.txt
+python generate.py [sample.txt]
 ```
 
-This will generate images with the condition given in [sample.txt](pretrained_models/sample.txt)
+This will generate images with the condition given in `sample.txt`. The format can be found at  [sample.txt](pretrained_models/sample.txt)
 
 ## Images
 
+### GIF
 ![](img/demo.gif)
 
+### Generated with given condition
+#### Pink hair /w different eyes color
+<img src = "img/pink-hair.jpg" width="200px">
+
+#### White hair /w different eyes color
+<img src = "img/white-hair.jpg" width="200px">
+
+#### Black hair Blue eyes
+<img src = "img/black-hair_blue-eyes-1.jpg" width="64px">
+<img src = "img/black-hair_blue-eyes-2.jpg" width="64px">
+
+#### Black hair Blue eyes
+<img src = "img/red-hair-green-eyes-1.jpg" width="64px">
+<img src = "img/red-hair-green-eyes-2.jpg" width="64px">
+
+#### Random
 <img src = "img/demo.png" width="200px">
 
 ## Credits
-
 Model and training is inspired by 
 [pavitrakumar78/Anime-Face-GAN-Keras](https://github.com/pavitrakumar78/Anime-Face-GAN-Keras)
 
